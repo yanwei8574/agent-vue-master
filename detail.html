@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="robots" content="all">
+<link rel="stylesheet" href='./css/free-flex.css'>
+<link rel="stylesheet" href='./css/style.css'>
+<title> 经纪人详细 </title>
+
+</head>
+<body>
+<div id="app">
+  <header>
+    <a class="back" href="list.html"><i></i></a>
+    <span class="title">{{title}}</span>
+  </header>
+  <section class="wrap">
+      <div class="imgs">
+        <img :src="agentList.titlepic">
+  		</div>
+  		<div class="text">
+  			<p class="name">{{ agentList.title }}</p>
+  			<p class="attr"></p>
+  			<p class="good">好评率：100%</p>
+  			<span class="location">所在门店：{{ agentList.store }}</span>
+  		</div>
+  		<div class="button" @click="toCallBtn(agentList.tel)">
+  		    <span>联系经纪人</span>
+  		</div>
+  </section>
+</div>
+<script src="./js/vue.min.js"></script>
+<script src="./js/axios.min.js"></script>
+<script type="text/javascript">
+	var app =
+    	new Vue({
+            el: '#app',
+            data: {
+              title:'经纪人详细',
+              agentList:[]
+            },
+            methods: {
+              toCallBtn : function (item) {
+                window.location.href = 'tel:' + item;
+              }
+            },
+            created: function () {
+              var _this = this ;
+              var url = window.location.search.substr(4);
+
+                axios({
+                    method: 'post',
+                    url: './js/agentList.json',
+                    params: {
+
+                    }
+                }).then( function (response) {
+                  response.data.data.forEach(function (value, index, array) {
+                    if (value.id === url){
+                      _this.agentList = response.data.data[index];
+                      //console.log(_this.agentList);
+                    }
+                  });
+
+                }).catch( function (error) {
+                    console.log(error);
+                });
+            },
+            mounted: function () {
+            }
+      });
+</script>
+</body>
+</html>
