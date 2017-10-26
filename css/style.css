@@ -1,0 +1,220 @@
+/* ====================
+     公共样式
+	 作者：严微
+====================  */
+html{ -webkit-text-size-adjust:none;}
+body{ font-size:14px; line-height:24px; color: #333; margin:0 auto; padding:0; border:0;  font-family:"Microsoft YaHei",Arial;}
+div{margin:0 auto; padding:0;}
+h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,form,img,p{ margin:0; padding:0; border:none; list-style-type:none;}
+.block{ width:960px; height:auto;}
+em,i{font-style:normal;}
+.fl{float:left;}
+.fr{float:right;}
+.tl{ text-align:left;}
+.tc{ text-align:center;}
+.tr{ text-align:right;}
+.dis{display:block;}
+.inline{display:inline;}
+.none{display:none;}
+.mb30{ margin-bottom: 30px;}
+.mb40{ margin-bottom: 40px;}
+.mt120{ margin-top: 120px;}
+
+a {outline:none; text-decoration:none; }
+a:hover { text-decoration:none; }
+a:focus { outline: none;}
+
+.clearfix:after{ content:"."; display:block; height:0; clear:both; visibility:hidden;}
+*html .clearfix{ height:1%;}
+*+html .clearfix{ height:1%;}
+
+#app{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+header{
+  position: relative;
+  height: 40px;
+  padding: 5px 0;
+  background-color: #f8f8f8;
+  text-align: center;
+  box-sizing: border-box;
+}
+header a.back {
+    float: left;
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+}
+header a.back i{
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-top: 6px;
+    background: url(../images/arrow.png) no-repeat;
+    background-size: 50% 50%;
+}
+header span.title {
+  display: block;
+  font-size: 14px;
+  color: #515151;
+  line-height: 32px;
+  margin: 0 auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+section {
+  font-size: 14px;
+  margin-top: 0;
+}
+.agent-info{
+  padding: 10px;
+}
+.agent-info .basic-info {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e7e7e7;
+    overflow: hidden;
+}
+.agent-info .basic-info .avatar {
+    float: left;
+    width: 55px;
+    height: 55px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.agent-info .basic-info .avatar img {
+    width: 100%;
+    height: 100%;
+}
+.agent-info .basic-info .info {
+    float: left;
+    margin-left: 15px;
+}
+
+.agent-info .basic-info .info p {
+    font-size: 14px;
+    color: #252525;
+    margin-bottom: 4px;
+}
+
+.agent-info .basic-info .info p.name {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.agent-info .basic-info .info p.star-score {
+    margin-bottom: 0;
+}
+
+.agent-info .basic-info .info .score {
+	display: inline-block;
+	font-size: 12px;
+	height: 14px;
+	line-height: 14px;
+  color: #fff;
+  padding: 1px;
+  background: #f5a623;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  border-radius: 1px;
+}
+i.star12 {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url('../images/star12.png') no-repeat;
+  background-size: contain;
+}
+.agent-info .basic-info .operation {
+  margin-top: 0.18rem;
+  margin-left: 0.2rem;
+}
+
+.agent-info .basic-info .operation img {
+  width: 32px;
+  height: 32px;
+}
+.agent-info .basic-info .operation p {
+  font-size: 12px;
+  color: #4a4a4a;
+  text-align: center;
+}
+
+.wrap{
+  width: 100%;
+  height:100%;
+  background: #fff;
+  margin:0 auto;
+  font-size: 16px;
+}
+.wrap .imgs{
+  width:70px;
+  height: 70px;
+  margin:20px auto 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.wrap .imgs img{
+  width: 100%;
+}
+.wrap .text{
+  text-align: center;
+}
+.wrap .name{
+  font-size:16px;
+  line-height: 24px;
+  margin-top:10px;
+  color: #333;
+}
+.wrap .attr{
+  font-size:14px;
+  line-height: 24px;
+  margin-top:10px;
+  color: #666;
+}
+.wrap .good{
+  font-size:12px;
+  line-height: 24px;
+  margin-top:10px;
+  color: #999;
+}
+.wrap .location{
+  display:inline-block;
+  height:24px;
+  padding:0 10px;
+  border-radius:5px;
+  font-size:12px;
+  line-height: 24px;
+  margin-top:15px;
+  color: #999;
+  background: #f2f2f2;
+}
+.wrap .button{
+  padding:0 10px;
+  margin-top:20px;
+  height: 44px;
+}
+.wrap .button span{
+  display:block;
+  width:100%;
+  height:44px;
+  line-height:44px;
+  background: #F7594A;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+}
